@@ -1,0 +1,118 @@
+@use './variables.scss' as *;
+main {
+  background-color: $color-white;
+  h3 {
+    padding-top: 5vh;
+    text-align: center;
+    font-size: 1.5em;
+    color: $base-color-darker;
+  }
+
+  .restaurants-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    display: grid;
+    column-gap: 15px;
+    row-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .restaurant {
+    height: fit-content;
+    color: $color-white;
+    border-radius: 10px;
+    padding-bottom: 3%;
+    background-color: $base-color-darker;
+    img {
+      width: 100%;
+      height: 275px;
+      padding: 15px;
+      border-radius: 30px;
+    }
+    .restaurant-info {
+      font-size: 1em;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      row-gap: 10px;
+      grid-template-areas:
+        'restaurant-name restaurant-name'
+        'restaurant-city restaurant-rating'
+        'restaurant-description restaurant-description'
+        'restaurant-button restaurant-button';
+    }
+
+    .restaurant-name {
+      font-weight: $font-semi-bold;
+      font-size: 1.4em;
+      text-align: center;
+      grid-area: restaurant-name;
+    }
+
+    .restaurant-city {
+      grid-area: restaurant-city;
+    }
+
+    .restaurant-rating {
+      grid-area: restaurant-rating;
+    }
+
+    .restaurant-description {
+      display: -webkit-box;
+      -webkit-line-clamp: 1; /* number of lines to show */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* number of lines to show */
+      -webkit-box-orient: vertical;
+      grid-area: restaurant-description;
+    }
+    .restaurant-detail-link {
+      min-height: 44px;
+      min-height: 44px;
+      font-size: 1.2em;
+      color: $color-white;
+      text-decoration: none;
+      margin-top: 1vh;
+      transition: ease-in 0.2s;
+    }
+    .restaurant-detail-link::after {
+      content: '';
+      width: 0px;
+      height: 2px;
+      display: block;
+      background: $color-white;
+      transition: 300ms;
+    }
+
+    .restaurant-detail-link:hover::after {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    .restaurants-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  main {
+    .restaurants-container {
+      width: 100%;
+      grid-template-columns: 1fr;
+      row-gap: 20 px;
+    }
+
+    .restaurant {
+      border-radius: 0px;
+    }
+  }
+}
