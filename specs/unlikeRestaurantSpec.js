@@ -1,5 +1,5 @@
 import FavoriteRestaurantIdb from '../src/scripts/data/favoriterestaurants-idb';
-import { restaurantComplete } from './test_variables';
+import { restaurantComplete } from './helpers/test_variables';
 import * as TestFactories from './helpers/testFactories';
 
 const addLikeButtonContainer = () => {

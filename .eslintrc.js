@@ -3,10 +3,12 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
-    jasmine: true
+    jasmine: true,
+    "codeceptjs/codeceptjs": true
   },
   extends: [
     'airbnb-base',
+    "plugin:codeceptjs/recommended"
   ],
   parserOptions: {
     ecmaVersion: 12,
@@ -14,11 +16,18 @@ module.exports = {
   },
   rules: {
 	  'linebreak-style': 0,
-    'import/no-extraneous-dependencies': ["error", {"devDependencies": true}],
-    'no-console': ["error", {allow : ["warn", "error", "log"]}],
-    'no-underscore-dangle': ["error", { "allowAfterThis": true }],
     'no-param-reassign': ["error", {"props" : false}],
     'quotes' : ["error", "single", {"allowTemplateLiterals": true}],
+    'import/no-extraneous-dependencies': 0,
+    'no-console': 0,
+    'no-underscore-dangle': 0,
+    'no-restricted-globals': 0,
+    'consistent-return': 0,
+    'no-prototype-builtins': 0,
+    'import/prefer-default-export': 0,
+    'no-return-assign': 0,
+    'class-methods-use-this': 0,
+    'no-new': 0
   },
-  plugins : ["jasmine"]
+  plugins : ["jasmine", "codeceptjs"]
 };
