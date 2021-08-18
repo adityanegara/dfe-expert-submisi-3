@@ -6,9 +6,10 @@ class RestaurantItem extends HTMLElement {
 
   render() {
     this.innerHTML = `   <div class="restaurant">
-    <img tabindex ="0"
+    <img tabindex ="0" 
       src="${this._restaurant.pictureId}"
       alt="restaurant image ${this._restaurant.name}"
+      class="lazyload"
     />
     <div class="restaurant-info">
       <p  tabindex ="0" class="restaurant-name">${this._restaurant.name}</p>

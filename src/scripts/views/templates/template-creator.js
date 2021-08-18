@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantTemplate = (restaurant) => `
 <div class="restaurant">
-<img
+<img class="lazyload"
   tabindex="0"
   src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
   alt="restaurant image ${restaurant.name}"
