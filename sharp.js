@@ -4,9 +4,16 @@ const path = require('path');
 
 const target = path.resolve(__dirname, 'src/public/heros');
 const destination = path.resolve(__dirname, 'dist/heros');
+const dist = path.resolve(__dirname, 'dist');
+
+if (!fs.existsSync(dist)) {
+  console.log('making dist folder');
+  fs.mkdirSync(dist);
+}
 
 if (!fs.existsSync(destination)) {
-  fs.mkdirSync(destination);
+  console.log('making dist/heros folder');
+  fs.mkdirSync(path.join(__dirname, 'dist/heros'));
 }
 
 fs.readdirSync(target)
