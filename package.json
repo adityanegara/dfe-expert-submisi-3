@@ -8,6 +8,7 @@
     "lint": "eslint ./src",
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
+    "build-image": "node sharp.js",
     "e2e": "codeceptjs run --steps"
   },
   "author": "",
@@ -39,6 +40,7 @@
     "puppeteer": "^10.2.0",
     "sass": "^1.36.0",
     "sass-loader": "^10.1.1",
+    "sharp": "^0.28.3",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
