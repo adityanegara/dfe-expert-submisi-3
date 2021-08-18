@@ -13,7 +13,10 @@ var serviceWorkerOption = {
     "/illustrations/special_event.svg",
     "/illustrations/special_event2.svg",
     "/shape/red_blob2.svg",
+    "/0.bundle.js",
+    "/1.bundle.js",
     "/bundle.js",
+    "/3.bundle.js",
     "/index.html"
   ]
 };
