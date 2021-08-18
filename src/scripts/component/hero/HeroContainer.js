@@ -13,9 +13,8 @@ class HeroContainer extends HTMLElement {
     <div class="hero-container">
       <picture>
         <source media="(max-width: 600px)" 
-        style="width:100%; height:100%"
         srcset="${this.backgroundImageSmall}">
-        <img style="width:100%; height:100%" src="${this.backgroundImageLarge}"></img>
+        <img src="${this.backgroundImageLarge}"></img>
       </picture>
      
     </div>`;

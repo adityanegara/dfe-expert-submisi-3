@@ -19,7 +19,7 @@ describe('Liking A Restaurant', () => {
 
   it('should not show the unlike button when the restaurant has not been liked before', async () => {
     await TestFactories.createLikeButtonWithRestaurant(restaurantComplete);
-    expect(document.querySelector('[aria-label="unlike this movie"]')).toBeFalsy();
+    expect(document.querySelector('[aria-label="unlike this restaurant"]')).toBeFalsy();
   });
 
   it('should be able to like the restaurant', async () => {

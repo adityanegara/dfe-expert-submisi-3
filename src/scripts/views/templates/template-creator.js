@@ -4,7 +4,7 @@ const createRestaurantTemplate = (restaurant) => `
 <div class="restaurant">
 <img class="lazyload"
   tabindex="0"
-  src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
+  data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}"
   alt="restaurant image ${restaurant.name}"
 />
 <div class="restaurant-info">
