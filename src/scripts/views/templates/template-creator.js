@@ -34,7 +34,7 @@ const renderMenus = (menus) => {
 const renderReviews = (reviews) => {
   let stringReviews = ``;
   reviews.forEach((review) => {
-    stringReviews += `<li tabindex="0">${review.name} : ${review.review} (${review.date})</li>`;
+    stringReviews += `<li class="review-list" tabindex="0">${review.name} : ${review.review} (${review.date})</li>`;
   });
   return `<ul>
             ${stringReviews}

@@ -19,8 +19,6 @@ Scenario('liking one restaurant', async ({ I }) => {
   const firstRestaurantName = await I.grabTextFrom(firstRestaurant);
   const firstRestaurantDetailLink = locate('.restaurant-detail-link').first();
   const firstRestaurantHref = await I.grabTextFrom(firstRestaurantDetailLink);
-  console.log(firstRestaurantHref);
-  console.log(firstRestaurantName);
   I.click(firstRestaurantHref);
   I.seeElement('#likeButton');
   I.click('#likeButton');
